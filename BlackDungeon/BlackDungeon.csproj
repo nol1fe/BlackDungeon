@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="ConsoleViewBuilderArgs.cs" />
     <Compile Include="ConsoleViewBuilder.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="GameEngine.cs" />

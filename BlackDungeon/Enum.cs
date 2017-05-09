@@ -25,18 +25,41 @@ namespace BlackDungeon
 
     public enum ResourceType : int
     {
-        PlayerFootsteps = 1,
+        PlayerFootsteps = 0,
     }
 
     public enum GameState : int
     {
-        MainMenu = 1,
-        NewGame = 2
+        MainMenu = 0,
+        NewGame = 1,
+        Exit = 2
     }
 
     public enum GameMenu : int
     {
-        NewGame = 1,
-        Exit = 2
+        NewGame = 0,
+        Exit = 1
+    }
+
+    public enum HorizontalPosition : byte
+    {
+        Default = 0,
+        Left = 1,
+        Center = 2,
+        Right = 3,
+    }
+
+    public enum VerticalPosition : byte
+    {
+        Default = 0,
+        Top = 1,
+        Center = 2,
+        Bottom = 3,
+    }
+
+    public enum ConsoleWriteMode : byte
+    {
+        Line = 0,
+        Sign = 1,
     }
 }
