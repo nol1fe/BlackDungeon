@@ -45,17 +45,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="ConsoleViewBuilder.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="BonusProcessor.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="MapObjectBase.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="MenuView.cs" />
+    <Compile Include="MenuController.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="ContentManager.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="PlayerProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -96,9 +101,6 @@
     <Content Include="Content\Sound\Player\Footstep\footstep-dirt-09.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

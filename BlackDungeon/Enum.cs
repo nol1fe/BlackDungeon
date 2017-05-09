@@ -27,4 +27,16 @@ namespace BlackDungeon
     {
         PlayerFootsteps = 1,
     }
+
+    public enum GameState : int
+    {
+        MainMenu = 1,
+        NewGame = 2
+    }
+
+    public enum GameMenu : int
+    {
+        NewGame = 1,
+        Exit = 2
+    }
 }
