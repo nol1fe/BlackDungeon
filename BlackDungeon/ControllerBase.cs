@@ -10,6 +10,7 @@ namespace BlackDungeon
     {
         protected event GameStateChanged OnGameStateChange;
         protected ViewBase View;
+        private bool _isDisposed;
 
         public ControllerBase(ViewBase view, GameStateChanged onGameStateChange)
         {
@@ -25,5 +26,27 @@ namespace BlackDungeon
         }
 
         public abstract void Initialize();
+        //public void Dispose()
+        //{
+
+        //    Dispose(true);
+
+        //    GC.SuppressFinalize(this);
+
+        //}
+
+        //public virtual void Dispose(bool disposing)
+        //{
+        //    if (_isDisposed)
+        //    {
+        //        return;
+        //    }
+
+        //    Dispose(true);
+
+        //    _isDisposed = true;
+
+        //    GC.SuppressFinalize(this);
+        //}
     }
 }

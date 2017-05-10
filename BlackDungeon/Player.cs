@@ -8,6 +8,7 @@ namespace BlackDungeon
 {
     public class Player : MapObjectBase
     {
+        public bool HasActiveGame { get; set; }
         public Player() 
             : base('x', 0, 0)
         {

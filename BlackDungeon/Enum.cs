@@ -32,13 +32,15 @@ namespace BlackDungeon
     {
         MainMenu = 0,
         NewGame = 1,
-        Exit = 2
+        ActiveGame = 2,
+        Exit = 3
     }
 
     public enum GameMenu : int
     {
-        NewGame = 0,
-        Exit = 1
+        Continue = 0,
+        NewGame = 1,
+        Exit = 2
     }
 
     public enum HorizontalPosition : byte

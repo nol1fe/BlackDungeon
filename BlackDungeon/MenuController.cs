@@ -10,21 +10,20 @@ namespace BlackDungeon
     public class MenuController : ControllerBase
     {
         private MenuView menuView;
-        public MenuController(MenuView view, GameStateChanged onGameStateChange) : base(view, onGameStateChange)
+        private Player player;
+        public MenuController(MenuView view, GameStateChanged onGameStateChange, Player player) : base(view, onGameStateChange)
         {
             menuView = view;
+            this.player = player;
         }
 
         public override void Initialize()
         {
-           
             while (true)
             {
                 HandleKeyPressed();
             }
-               
         }
-
 
         private ConsoleKey HandleKeyPressed()
         {
@@ -36,7 +35,12 @@ namespace BlackDungeon
                     var selectedMenu = menuView.GetSelectedMenuPosition();
                     switch (selectedMenu)
                     {
+                        case GameMenu.Continue:
+                            ChangeGameState(GameState.ActiveGame);
+                            break;
                         case GameMenu.NewGame:
+                            player.HasActiveGame = false;
+                            menuView.loadingScreen();
                             ChangeGameState(GameState.NewGame);
                             break;
                         case GameMenu.Exit:
@@ -51,6 +55,10 @@ namespace BlackDungeon
                 case ConsoleKey.S:
                 case ConsoleKey.DownArrow:
                     menuView.SelectNext();
+                    break;
+                case ConsoleKey.Escape:
+                    if (player.HasActiveGame)
+                    ChangeGameState(GameState.ActiveGame);
                     break;
             }
 

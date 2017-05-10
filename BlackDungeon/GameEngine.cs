@@ -12,10 +12,10 @@ namespace BlackDungeon
     public class GameEngine
     {
         private Player player;
-
         public GameEngine()
         {
             Console.CursorVisible = false;
+
             player = new Player();
         }
 
@@ -35,12 +35,16 @@ namespace BlackDungeon
             switch (gameState)
             {
                 case GameState.MainMenu:
-                    var menuController = new MenuController(new MenuView(), OnGameStateChange);
+                    var menuController = new MenuController(new MenuView(player), OnGameStateChange, player);
                     menuController.Initialize();
                     break;
                 case GameState.NewGame:
-                    /// TODO
-                    //var gameController ...
+                    var gameController = new GameController(new GameView(player = new Player()), OnGameStateChange,player = new Player());
+                    gameController.Initialize();
+                    break;
+                case GameState.ActiveGame:
+                    gameController = new GameController(new GameView(player), OnGameStateChange, player);
+                    gameController.Initialize();
                     break;
                 case GameState.Exit:
                     Environment.Exit(0);

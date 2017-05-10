@@ -48,8 +48,10 @@
     <Compile Include="ConsoleViewBuilderArgs.cs" />
     <Compile Include="ConsoleViewBuilder.cs" />
     <Compile Include="Enum.cs" />
+    <Compile Include="GameController.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="BonusProcessor.cs" />
+    <Compile Include="GameView.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="MapObjectBase.cs" />
     <Compile Include="ControllerBase.cs" />

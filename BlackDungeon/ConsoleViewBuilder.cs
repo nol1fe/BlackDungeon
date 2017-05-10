@@ -57,6 +57,11 @@ namespace BlackDungeon
             });
         }
 
+        public void PrintTextCustoArgs(string text, ConsoleViewBuilderArgs consoleArgs)
+        {
+            consoleArgs.Text = text;
+            ProcessConsoleViewArgs(consoleArgs);
+        }
         private void ProcessConsoleViewArgs(ConsoleViewBuilderArgs args)
         {
             if (args != null)
